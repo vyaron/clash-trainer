@@ -1,0 +1,53 @@
+[v-cloak] { display: none }
+
+* {
+  box-sizing: border-box;
+}
+
+*:focus {
+  outline: none;
+}
+
+html {
+  color: var(--main-color);
+  background-color: var(--bg-color);
+  font-family: var(--primary-font);
+  -webkit-font-smoothing: antialiased;
+  -moz-osx-font-smoothing: grayscale;
+  
+  height: 100%;
+  text-align: center;
+  // font-size: 16px;
+  // @include for-mobile-only {
+  //   font-size: 14px;
+  // }
+}
+
+body {
+  height: 100%;
+}
+
+
+a {
+  color: currentColor;
+  text-decoration: none;
+  display: inline-block;
+  cursor:pointer;
+}
+
+ul,
+fieldset {
+  padding: 0;
+  margin: 0;
+}
+
+fieldset {
+  border: none;
+}
+
+button {
+  border: none;
+  background-color: transparent;
+  cursor: pointer;
+  font-family: var(--primary-font);
+}

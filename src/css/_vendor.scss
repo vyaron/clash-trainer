@@ -1,0 +1,31 @@
+// @import 'node_modules/normalize.css/normalize';
+@import './normalize';
+@import '../node_modules/animate.css';
+@import '../node_modules/sweetalert/dist/sweetalert.css';
+
+.sweet-alert {
+    background: linear-gradient(to bottom, #e570e7 0%,#c85ec7 47%,#a849a3 100%);
+    
+    h2 {
+        color:azure
+    }
+    p {
+        font-size: 1.4em;
+        color: #00315e;
+        text-align: left;
+    }
+    button.confirm {
+        background-color: #00315e !important;
+        transition: background-color 0.2s;
+        &:hover {
+            background-color: lighten(#00315e, 5%) !important;
+        }
+    }
+    .popup-content h4 {
+        text-align: center;
+        position: relative;
+        top: -1em;
+        color:antiquewhite;
+    }
+}
+// @import '../node_modules/sweetalert/themes/twitter/twitter.scss';

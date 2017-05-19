@@ -1,0 +1,16 @@
+$container-width: 1063px;
+$mobile-breakpoint: 642px;
+
+:root {
+  /* Layout */
+  --container-width: $container-width;
+  --inner-container-width: 900px;
+  /* Fonts */
+  --primary-font: 'Rammetto One', cursive;
+  --secondary-font: Ubuntu;
+  /* Colors */
+  --main-color: lightcyan;
+  --bg-color:   rgb(0, 103, 196);
+}
+
+

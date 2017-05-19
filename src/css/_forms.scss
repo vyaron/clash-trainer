@@ -1,0 +1,22 @@
+
+.btn {
+  border: 2px solid #23436a;
+  background-color: #fdd66f;
+  color: #23436a; 
+  border-radius: 5px;
+  padding: 1em;
+  box-shadow: 10px 10px 5px 0px rgba(10,10,10,0.75);
+  transition: all .2s;
+}
+
+.btn:hover {
+  cursor: pointer;
+  box-shadow: 5px 5px 5px 0px rgba(0,0,0,0.9);
+}
+
+.btn-primary {
+  background-color: #543076;
+  border-color: white;
+  color:white;
+  font-weight: bold;
+}
