@@ -25,7 +25,6 @@
 </template>
 
 <script lang="js">
-  import 'sweetalert' 
   import CardService from '../services/CardService'
   import CardFilter from './CardFilter'
   import CardList from './CardList'

@@ -4,7 +4,7 @@
     <h4>Showing {{cards.length}} Cards</h4>
        <transition-group name="list" class="full-height flex">
         <card v-for="card in cards" :key="card._id" :card="card" mode="preview" :class="{animated: card.selected, pulse : card.selected}"
-            @click.native="toggleCardSelection(card._id, this)" >
+            @click.native="toggleCardSelection(card._id)" >
         
          </card>
          </transition-group>
@@ -21,22 +21,10 @@ import Card from './Card';
   export default  {
     name: 'card-list',
     props: ['cards'],
-    mounted() {
-
-    },
-    data() {
-      return {
-      
-      }
-    },
     methods: {
-      toggleCardSelection (cardId, el) {
-        // console.log('el', el);
+      toggleCardSelection (cardId) {
         this.$emit('toggle', {cardId});
       }
-    },
-    computed: {
-
     },
     components: {
         Card
@@ -52,13 +40,15 @@ import Card from './Card';
     }*/
   }
 .list-move {
-  transition: transform 1s;
+  transition: transform 2s;
+  transition-delay: 2s;
 }
 .list-enter-active, .list-leave-active {
-  transition: all 2s;
+  transition: all 3s;
 }
-.list-enter, .list-leave-to /* .list-leave-active for <2.1.8 */ {
+.list-enter, .list-leave-to  {
   opacity: 0;
-  transform: translateY(10px);
+  // transform: translateY(10px);
+  transform: translateX(200px);
 }
 </style>

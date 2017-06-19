@@ -24,7 +24,7 @@
 </template>
 
 <script lang="js">
-import 'sweetalert'; 
+
 import CardService from '../services/CardService';
 import Card from './Card';
 
@@ -46,7 +46,7 @@ function drawOpCard(op) {
         cards: CardService.getDeck(),
         op: {},
         me: {health: 7, currCard: null, currCardHealth: 0},
-        isGameOn: false
+        isUserTurn: false
       }
     },
     created() {
@@ -56,7 +56,7 @@ function drawOpCard(op) {
             this.op = op;
             setTimeout(()=> {
                 drawOpCard(this.op)
-                this.isGameOn = true;
+                this.isUserTurn = true;
             }, 1000);
             
         })
@@ -65,8 +65,8 @@ function drawOpCard(op) {
     methods: {
       placeCard(card) {
 
-        if (!this.isGameOn) return;
-        this.isGameOn = false;
+        if (!this.isUserTurn) return;
+        this.isUserTurn = false;
         this.me.currCard = card;
         CardService.audio.meAttack.play();
 
@@ -85,7 +85,7 @@ function drawOpCard(op) {
                 this.op.currCard = null;
                 setTimeout(() => {
                     const opCard = drawOpCard(this.op);
-                    if (opCard) this.isGameOn = true;
+                    if (opCard) this.isUserTurn = true;
                     else this.gameOver();
                 }, 2000);
             }, 1500)
@@ -94,7 +94,7 @@ function drawOpCard(op) {
 
       },
        gameOver() {
-           this.isGameOn = false;
+           this.isUserTurn = false;
             if (Math.random() > 0.5)        CardService.audio.win.play();
             else                            CardService.audio.lose.play();
             swal({

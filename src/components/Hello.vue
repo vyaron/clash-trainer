@@ -27,11 +27,6 @@ import CardService from '../services/CardService'
 export default {
 
   name: 'hello',
-  data() {
-    return {
-
-    }
-  },
   created() {
     // getting the cards here only to kick img preloading
     CardService.getCards();

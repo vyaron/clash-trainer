@@ -46,9 +46,7 @@
       display: inline-block;
       margin:10px 0 0 5px;
       flex-grow: 1;
-      // height:100px;
       width: calc(100% * (1/4) - 10px - 1px);
-      /*font-size: 0.1em;*/
       img {
         max-height:200px;
         @include for-mobile-only {
@@ -60,14 +58,11 @@
 
     &.preview.selected {
       color: green
-        /*.card-cost {
-          color: --var(main-color)
-        }    */
     }
     .card-name {
       position:absolute;
       bottom: -15px;
-      // letter-spacing: -1px;  
+      font-size: 0.8em;
       background: rgba(0, 0, 0, 0.7);
       padding: 0.5em; 
 
@@ -81,7 +76,6 @@
       top: -15px;
       right:1px;
       background: rgba(0, 0, 0, 0.7);
-      
     }
 
     box-shadow: 0 1px 3px rgba(0, 0, 0, 0.12), 0 1px 2px rgba(0, 0, 0, 0.24);

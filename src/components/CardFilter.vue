@@ -40,17 +40,12 @@
         this.cardTypes = cardTypes;
       });
     },
-    mounted() {
-
-    },
     data() {
       return {
         cardsFilter: {byName: '', byType: '', byArena: '', byMaxCost: ''},
         cardTypes: [],
         arenas: new Array(11)
       }
-    },
-    methods: {
     },
     watch: {
       cardsFilter: {
