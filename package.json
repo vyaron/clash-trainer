@@ -7,9 +7,9 @@
   "scripts": {
     "build": "set NODE_ENV=production & node build/build.js",
     "postinstall": "npm run build",
-    "start": "cd dist & node node_modules/http-server/bin/http-server",
+    "start-keep": "cd dist & node node_modules/http-server/bin/http-server",
     "dev": "node build/dev-server.js",
-    "build-dev": "node build/build.js",
+    "build-dev": "node build/build.js", 
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
@@ -17,7 +17,6 @@
   },
   "dependencies": {
     "animate.css": "^3.5.2",
-    "http-server": "^0.10.0",
     "sweetalert": "^1.1.3",
     "vue": "^2.2.2",
     "vue-router": "^2.2.0"
