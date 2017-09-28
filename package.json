@@ -9,7 +9,7 @@
     "heroku-postbuild": "echo POST-BUILD",
     "x-heroku-postbuild": "set NODE_ENV=production & node build/build.js",
     "x-preinstall": "npm install -g http-server",
-    "start": "http-server dist/ -p 80",
+    "start": "http-server dist/ -p 8080",
     "x-start": "cd dist & node ../node_modules/http-server/bin/http-server",
     "dev": "node build/dev-server.js",
     "build": "node build/build.js",
