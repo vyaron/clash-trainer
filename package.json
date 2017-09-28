@@ -5,11 +5,12 @@
   "author": "",
   "private": true,
   "scripts": {
-    "build": "set NODE_ENV=production & node build/build.js",
-    "postinstall": "npm run build",
+    "x-heroku-prebuild": "echo This runs before Heroku installs your dependencies.",
+    "x-heroku-postbuild": "set NODE_ENV=production & node build/build.js",
+    "x-postinstall": "echo POST INSTALL",
     "start-keep": "cd dist & node node_modules/http-server/bin/http-server",
     "dev": "node build/dev-server.js",
-    "build-dev": "node build/build.js", 
+    "build": "node build/build.js",
     "unit": "cross-env BABEL_ENV=test karma start test/unit/karma.conf.js --single-run",
     "e2e": "node test/e2e/runner.js",
     "test": "npm run unit && npm run e2e",
@@ -85,8 +86,7 @@
     "webpack-merge": "^2.6.1"
   },
   "engines": {
-    "node": ">= 4.0.0",
-    "npm": ">= 3.0.0"
+    "node": "v7.7.1"
   },
   "browserslist": [
     "> 1%",
