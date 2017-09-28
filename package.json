@@ -5,7 +5,7 @@
   "author": "",
   "private": true,
   "scripts": {
-    "heroku-prebuild": "echo PRE-INSTALL This runs before Heroku installs your dependencies.",
+    "heroku-prebuild": "npm install -g http-server",
     "heroku-postbuild": "echo POST-BUILD",
     "x-heroku-postbuild": "set NODE_ENV=production & node build/build.js",
     "preinstall": "npm install -g http-server",
